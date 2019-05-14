@@ -8,11 +8,17 @@ import { Student } from '../../shared/student.model';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
-    serverId = 10;
+
     serverStatus = 'offLine';
     counter = 0;
+    chicken: string;
+    bun: string;
+    lettuce: string;
+    tomato: string;
+    beef: string;
     isLogin = false;
     userName: string;
+    dish: string;
     students: Student[] = [new Student('Bill Gates', 'Computer Science'),
                            new Student('Steve Jobs', 'Computer Science'),
                            new Student('Elon Musk', 'Computer Science')];
@@ -21,25 +27,23 @@ export class ServerComponent {
       return this.serverStatus;
     }
 
-    counterPlus() {
-     this.counter ++;
-    }
+    addChicken(){
+      this.chicken = 'chicken added';
 
-    resetCounter() {
-      this.counter = 0;
     }
-
-    login() {
-      this.isLogin = true;
+    addBun(){
+      this.bun = 'bun added';
     }
-
-    signOut() {
-      this.isLogin = false;
+    addLettuce(){
+      this.lettuce = 'lettuce added';
     }
-
-    // Event Binding
-    onUpdateUserName(event: Event) {
-      console.log(event);
-      this.userName = (<HTMLInputElement>event.target).value;
+    addTomato(){
+      this.tomato = 'tomato added';
+    }
+    addBeef(){
+      this.beef = 'beef added';
+    }
+    makeDish(){
+      this.dish = 'Chicken Burger';
     }
 }

@@ -1,43 +1,24 @@
-<h4>This is a Component Example. </h4>
-<p> Server with ID {{ serverId }}  is {{ serverStatus }} </p>
-<p> {{ 'Server' }} with ID {{ serverId }}  is {{ serverStatus }} </p>
-<p> {{ 'Server' }} with ID {{ serverId }}  is {{ getServerStatus() }} </p>
 
-<hr>
-<h4>This is a counter</h4>
-<p> {{ counter }} </p>
-<button class="btn btn-primary" (click)="counterPlus()" style="margin-right: 10px"> Add One</button>
-<button class="btn btn-primary" (click)="resetCounter()"> Reset Counter</button>
+<h4>These are available ingredients</h4>
 
-<hr>
-<h4>This is a input Box with Event Binding</h4>
-<div>
-  <span>User Name: </span>
-  <input type="text" (input)="onUpdateUserName($event)">
-</div>
+<button class="btn btn-primary" (click)="addBun()" style="margin-right: 10px"> Add Bun</button>
+<button class="btn btn-primary" (click)="addChicken()" style="margin-right: 10px"> Add Chicken</button>
+<button class="btn btn-primary" (click)="addBeef()" style="margin-right: 10px"> Add Beef</button>
+<button class="btn btn-primary" (click)="addLettuce()" style="margin-right: 10px"> Add Lettuce</button>
+<button class="btn btn-primary" (click)="addTomato()" style="margin-right: 10px"> Add Tomato</button>
 
-<div>
-  <span>Password: </span>
-  <input type="password">
-</div>
-<div *ngIf="isLogin" class="informBoxBoarder"> You Loggedin as {{ userName }} </div>
-<button class="btn btn-light" (click)="login()" style="margin-right: 10px"> Login </button>
-<button class="btn btn-light" (click)="signOut()"> Sign Out </button>
 
-<hr>
-<h4>This is a input Box with Two Way Data Binding</h4>
-<div>
-  <span>User Name: </span>
-  <input type="text" [(ngModel)]="userName">
-</div>
+<p> {{ bun }}</p>
+<p> {{ chicken }}</p>
+<p> {{ beef }}</p>
+<p> {{ lettuce }}</p>
+<p> {{ tomato  }} </p>
 
-<div>
-  <span>Password: </span>
-  <input type="password">
-</div>
-<div *ngIf="isLogin" class="informBoxBoarder"> You Loggedin as {{ userName }} </div>
-<button class="btn btn-light" (click)="login()" style="margin-right: 10px"> Login </button>
-<button class="btn btn-light" (click)="signOut()"> Sign Out </button>
+
+<button class="btn btn-primary" (click)="makeDish()" style="margin-right: 10px"> Make Dish</button>
+<p>{{dish}}</p>
+
+
 
 <hr>
 <h4>This is a StudentList managed by ngfor loop</h4>
